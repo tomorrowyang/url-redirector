@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "IP和端口重定向",
+  "version": "1.1",
+  "description": "自动重定向特定的IP和端口组合到新的IP和端口组合",
+  "permissions": ["declarativeNetRequest"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "host_permissions": ["*://*/*"],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  }
+}

@@ -1,0 +1,408 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "http://192.168.0.200:8011"
+      }
+    },
+    "condition": {
+      "urlFilter": "*://10.25.7.11:80/*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "http://192.168.0.200:8012"
+      }
+    },
+    "condition": {
+      "urlFilter": "*://10.25.7.12:8080/*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "http://192.168.0.200:8013"
+      }
+    },
+    "condition": {
+      "urlFilter": "*://10.25.7.13:8090/*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 4,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "http://192.168.0.200:7777"
+      }
+    },
+    "condition": {
+      "urlFilter": "*://10.25.7.16:7777/*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 5,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "http://192.168.0.200:9998"
+      }
+    },
+    "condition": {
+      "urlFilter": "*://10.25.7.16:9998/*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 6,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "http://192.168.0.200:8019"
+      }
+    },
+    "condition": {
+      "urlFilter": "*://10.25.7.19:9000/*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 7,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "http://192.168.0.200:8200"
+      }
+    },
+    "condition": {
+      "urlFilter": "*://10.25.7.200:8080/*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 8,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "http://192.168.0.200:8201"
+      }
+    },
+    "condition": {
+      "urlFilter": "*://10.25.7.201:8090/*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 9,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "http://192.168.0.200:8202"
+      }
+    },
+    "condition": {
+      "urlFilter": "*://10.25.7.202:80/*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 10,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "http://192.168.0.200:8205"
+      }
+    },
+    "condition": {
+      "urlFilter": "*://10.25.7.205:8080/*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 11,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "http://192.168.0.200:8091"
+      }
+    },
+    "condition": {
+      "urlFilter": "*://192.168.40.128:8080/*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 12,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "http://192.168.0.200:5556"
+      }
+    },
+    "condition": {
+      "urlFilter": "*://172.30.172.193:5556/*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 13,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "http://192.168.0.200:8035"
+      }
+    },
+    "condition": {
+      "urlFilter": "*://10.25.46.35:80/*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 14,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "http://192.168.0.200:8028"
+      }
+    },
+    "condition": {
+      "urlFilter": "*://10.25.46.28:80/*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 15,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "http://192.168.0.200:8888"
+      }
+    },
+    "condition": {
+      "urlFilter": "*://10.25.46.28:8888/*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 16,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "http://192.168.0.200:9000"
+      }
+    },
+    "condition": {
+      "urlFilter": "*://10.25.46.28:9000/*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 17,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "http://192.168.0.200:19999"
+      }
+    },
+    "condition": {
+      "urlFilter": "*://10.25.46.28:9999/*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 18,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "http://192.168.0.200:10004"
+      }
+    },
+    "condition": {
+      "urlFilter": "*://10.25.46.28:10004/*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 19,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "http://192.168.0.200:10005"
+      }
+    },
+    "condition": {
+      "urlFilter": "*://10.25.46.28:10005/*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 20,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "http://192.168.0.200:10006"
+      }
+    },
+    "condition": {
+      "urlFilter": "*://10.25.46.28:10006/*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 21,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "http://192.168.0.200:10007"
+      }
+    },
+    "condition": {
+      "urlFilter": "*://10.25.46.28:10007/*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 22,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "http://192.168.0.200:10008"
+      }
+    },
+    "condition": {
+      "urlFilter": "*://10.25.46.28:10008/*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 23,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "http://192.168.0.201:8018"
+      }
+    },
+    "condition": {
+      "urlFilter": "*://10.25.7.18:80/*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 24,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "http://192.168.0.201:4873"
+      }
+    },
+    "condition": {
+      "urlFilter": "*://10.25.7.18:4873/*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 25,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "http://192.168.0.201:8088"
+      }
+    },
+    "condition": {
+      "urlFilter": "*://10.25.7.88:8081/*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 26,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "http://192.168.0.201:8096"
+      }
+    },
+    "condition": {
+      "urlFilter": "*://10.25.7.96:8081/*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 27,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "http://192.168.0.201:8126"
+      }
+    },
+    "condition": {
+      "urlFilter": "*://10.25.7.126:8000/*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 28,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "http://192.168.0.201:8139"
+      }
+    },
+    "condition": {
+      "urlFilter": "*://10.25.7.139:18080/*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 29,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "http://192.168.0.201:2222"
+      }
+    },
+    "condition": {
+      "urlFilter": "*://10.25.46.59:2222/*",
+      "resourceTypes": ["main_frame"]
+    }
+  }
+]
