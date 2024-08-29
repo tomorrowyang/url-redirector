@@ -404,5 +404,41 @@
       "urlFilter": "*://10.25.46.59:2222/*",
       "resourceTypes": ["main_frame"]
     }
+  },
+  {
+    "id": 30,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "scheme": "http",
+          "host": "gitlab.bxplc.cn",
+          "port": "8011"
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "|http://gitlab.bxplc.cn/*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 31,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "scheme": "https",
+          "host": "gitlab.bxplc.cn",
+          "port": "8011"
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "|https://gitlab.bxplc.cn/*",
+      "resourceTypes": ["main_frame"]
+    }
   }
 ]
