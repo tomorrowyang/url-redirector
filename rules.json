@@ -440,5 +440,23 @@
       "urlFilter": "|https://gitlab.bxplc.cn/*",
       "resourceTypes": ["main_frame"]
     }
+  },
+  {
+    "id": 32,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "scheme": "http",
+          "host": "192.168.0.200",
+          "port": "8011"
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "|http://10.25.7.11/*",
+      "resourceTypes": ["main_frame"]
+    }
   }
 ]
