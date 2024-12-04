@@ -5,7 +5,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "http://192.168.0.205:8011"
+        "url": "http://192.168.0.200:8011"
       }
     },
     "condition": {
@@ -21,7 +21,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "http://192.168.0.205:8011"
+        "url": "http://192.168.0.200:8011"
       }
     },
     "condition": {
