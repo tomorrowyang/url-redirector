@@ -1,0 +1,11 @@
+{
+  "name": "url-redirector",
+  "version": "1.0.0",
+  "scripts": {
+    "transform-excel": "node transformExcel.js",
+    "generate-rules": "node generateRules.js"
+  },
+  "dependencies": {
+    "node-xlsx": "^0.24.0"
+  }
+}
