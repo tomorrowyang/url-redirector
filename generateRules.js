@@ -37,18 +37,17 @@ function generateRules() {
       if (typeof mapping === 'string') {
         // 简单映射，没有备份
         const [targetHost, targetPort] = mapping.split(':');
-        // 创建两个规则：一个带端口，一个不带端口（针对80端口）
         rules.push({
           id: id++,
           priority: 1,
           action: {
             type: "redirect",
             redirect: {
-              url: `http://${targetHost}:${targetPort}`
+              regexSubstitution: `http://${targetHost}:${targetPort}\\1`
             }
           },
           condition: {
-            urlFilter: `*://${sourceBase}/*`,
+            regexFilter: `^https?://${sourceHost}:${sourcePort}(/.*)?$`,
             resourceTypes: ["main_frame"]
           }
         });
@@ -61,11 +60,11 @@ function generateRules() {
             action: {
               type: "redirect",
               redirect: {
-                url: `http://${targetHost}:${targetPort}`
+                regexSubstitution: `http://${targetHost}:${targetPort}\\1`
               }
             },
             condition: {
-              urlFilter: `*://${sourceHost}/*`,
+              regexFilter: `^https?://${sourceHost}(/.*)?$`,
               resourceTypes: ["main_frame"]
             }
           });
@@ -74,19 +73,18 @@ function generateRules() {
         // 带备份的映射
         const [primaryHost, primaryPort] = mapping.primary.split(':');
         
-        // 添加主要地址规则（优先级最高）
-        // 创建两个规则：一个带端口，一个不带端口（针对80端口）
+        // 添加主要地址规则
         rules.push({
           id: id++,
-          priority: 2, // 主地址优先级更高
+          priority: 1,
           action: {
             type: "redirect",
             redirect: {
-              url: `http://${primaryHost}:${primaryPort}`
+              regexSubstitution: `http://${primaryHost}:${primaryPort}\\1`
             }
           },
           condition: {
-            urlFilter: `*://${sourceBase}/*`,
+            regexFilter: `^https?://${sourceHost}:${sourcePort}(/.*)?$`,
             resourceTypes: ["main_frame"]
           }
         });
@@ -95,56 +93,16 @@ function generateRules() {
         if (sourcePort === '80') {
           rules.push({
             id: id++,
-            priority: 2,
+            priority: 1,
             action: {
               type: "redirect",
               redirect: {
-                url: `http://${primaryHost}:${primaryPort}`
+                regexSubstitution: `http://${primaryHost}:${primaryPort}\\1`
               }
             },
             condition: {
-              urlFilter: `*://${sourceHost}/*`,
+              regexFilter: `^https?://${sourceHost}(/.*)?$`,
               resourceTypes: ["main_frame"]
-            }
-          });
-        }
-
-        // 处理备份地址（按顺序降低优先级）
-        if (mapping.backups) {
-          mapping.backups.forEach((backup, index) => {
-            const [backupHost, backupPort] = backup.split(':');
-            // 创建带端口的规则
-            rules.push({
-              id: id++,
-              priority: 1, // 备份地址优先级较低
-              action: {
-                type: "redirect",
-                redirect: {
-                  url: `http://${backupHost}:${backupPort}`
-                }
-              },
-              condition: {
-                urlFilter: `*://${sourceBase}/*`,
-                resourceTypes: ["main_frame"]
-              }
-            });
-
-            // 如果是80端口，添加不带端口的规则
-            if (sourcePort === '80') {
-              rules.push({
-                id: id++,
-                priority: 1,
-                action: {
-                  type: "redirect",
-                  redirect: {
-                    url: `http://${backupHost}:${backupPort}`
-                  }
-                },
-                condition: {
-                  urlFilter: `*://${sourceHost}/*`,
-                  resourceTypes: ["main_frame"]
-                }
-              });
             }
           });
         }
